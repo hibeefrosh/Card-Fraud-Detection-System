@@ -1,0 +1,38 @@
+.row,.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.bg-color{
+    background-color: rgb(62, 4, 189);
+    color: white;
+}
+.bg-color-light {
+    background-color: rgba(62, 4, 189, 0.4);
+}
+.text-color{
+    color: rgb(62, 4, 189);
+}
+.abs-navbar.top-bar{
+    padding: 10px 7px;
+}
+.crd-icon{
+    font-size: 50px;
+}
+/* .crd-1{
+    background-image: linear-gradient(to right, #6acc7f, rgb(3, 204, 77));
+} */
+.crd-1 .crd-icon{
+    color: rgb(195, 66, 66);
+}
+.crd-2 .crd-icon {
+    color: rgb(220, 101, 10);
+}
+.dropdown-menu{
+    padding: 0px;
+}
+.dropdown-menu .dropdown-item{
+    padding: 7px 10px;
+}
+.pagination .page-link{
+    color: #000;
+}
