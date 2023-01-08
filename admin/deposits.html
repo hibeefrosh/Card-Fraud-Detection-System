@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/abs-design.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/media-query.css" />
+    <link rel="stylesheet" href="../assets/css/style2.css" />
+    <title>Dashboard</title>
+    <style>
+        .brand-logo{
+            width: 100%;
+            height: 100%;
+            max-height: 70px;
+            max-width: 70px;
+        }
+        .dash-card{
+            height: 90px;
+        }
+        .dash-container{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="abs2-side-navbar">
+        <div class="abs2-nav-brand ml-1">
+            <button type="button" class="btn mr-2 abs2-nav-toggler" id="nav-toggler">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+            <h5 class="ml-1 font-weight-bold text-dark">
+                <!-- <i class="fa fa-folder"></i> -->
+                TRADEFXCAPITAL
+            </h5>
+        </div>
+        <div class="abs2-nav" id="navs">
+            <ul class="list-unstyled">
+                <li class="abs2-nav-item">
+                    <a href="#" class="abs2-nav-link active">
+                        <span class="icon">
+                            <i class="fa fa-home"></i>
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="abs2-nav-item">
+                    <a href="students/index.html" class="abs2-nav-link">
+                        <span class="icon">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        Users
+                    </a>
+                </li>
+                <li class="abs2-nav-item">
+                    <a href="#" class="abs2-nav-link">
+                        <span class="icon">
+                            <i class="fa fa-credit-card"></i>
+                        </span>
+                        Deposits
+                    </a>
+                </li>
+                <li class="abs2-nav-item">
+                    <a href="#" class="abs2-nav-link">
+                        <span class="icon">
+                            <i class="fa fa-power-off"></i>
+                        </span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="d-flex align-items-center justify-content-between flex-wrap p-3">
+            <h4 class="">Deposits</h4>
+            <div class="">
+                <form class="" action="/admin/transaction" method="post">
+                    <div class="form-input-group">
+                        <button type="submit" class="btn input-append">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <input type="text" class="form-input" name="id" placeholder="search">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="dash-container">
+        	<div class="d-flex justify-content-end text-right mb-2">
+                <div class="form-input-group">
+                    <button type="submit" class="btn input-append">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                    <select class="form-input">
+                    	<option value="">Pending</option>
+                    	<option value="">Approved</option>
+                    	<option value="">Declined</option>
+                    </select>
+                </div>
+            </div>
+        	<div class="abs-table-wrapper">
+                <table class="table table-striped">
+                    <thead>
+                        <th>Name</th>
+                        <th>Payment Method</th>
+                        <th>Amount</th>
+                        <th>Plan</th>
+                        <th>Status</th>
+                        <th>Transaction Date</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <td>Alex Adedips</td>
+                        <td>Bitcoin</td>
+                        <td>Premium</td>
+                        <td>3200</td>
+                        <td>
+                            <span class="badge badge-warning">Pending</span>
+                        </td>
+                        <td>Oct 21, 2022</td>
+                        <td>
+                			<!-- <a href="" class="abs-btn text-info">
+                				<i class="fa fa-folder-open"></i>
+                			</a> -->
+                			<a href="" class="abs-btn text-success">
+                				<i class="fa fa-check"></i>
+                			</a>
+                			<a href="" class="abs-btn text-danger">
+                				<i class="fa fa-times"></i>
+                			</a>
+                		</td>
+                    </tbody>
+                </table>
+            </div>
+	    </div>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+    <script>
+        var navb = document.querySelector(".abs2-side-navbar");
+        document.querySelector(".abs2-side-navbar .abs2-nav-toggler#nav-toggler").onclick = function(event) {
+            if (navb.classList.contains("abs2-nav-resp")) {
+                navb.classList.remove("abs2-nav-resp")
+                this.innerHTML = '<i class="fa fa-bars"></i>'
+            } else {
+                navb.classList.add("abs2-nav-resp")
+                this.innerHTML = '<i class="fa fa-times"></i>'
+            }
+        }
+    </script>
+
+</body>
+</html>

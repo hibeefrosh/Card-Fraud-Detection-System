@@ -10,7 +10,6 @@ body{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: rgba(62, 4, 189, 0.05);
     font-family: 'Open Sans', sans-serif;
 }
 p{
@@ -52,7 +51,7 @@ CARD DESIGNS AND ENTITIES
 .abs-card{
     border: 1px solid #dadada;
     border-radius: 5px;
-    background-color: #fff;
+    width: 30%;
 }
 .abs-card.card-shadow-sm{
     margin-top: 5px;
@@ -97,7 +96,6 @@ FONTS AND TYPOGRAPHY UTILITIES
 */
 .font-sm{
     font-size: 12px;
-    line-height: 0.4em;
 }
 .font-md{
     font-size: 18px;
@@ -114,7 +112,6 @@ BUTTON DESIGNS AND UTILITIES
 */
 .abs-btn{
     border: 1px solid #fafafa;
-    padding: 8px 10px;
 }
 .abs-btn:hover{
     filter: brightness(93%);
@@ -133,9 +130,6 @@ BUTTON DESIGNS AND UTILITIES
 }
 .abs-btn.btn-sm.btn-rounded{
     border-radius: 14px!important;
-}
-.abs-btn.btn-rounded{
-    border-radius: 15px;
 }
 .abs-btn.btn-md.btn-rounded {
     border-radius: 17px !important;
@@ -168,6 +162,7 @@ BUTTON DESIGNS AND UTILITIES
 }
 .abs-navbar{
     padding: 0 1.2em;
+    position: relative;
 }
 .abs-navbar.abs-wide,.abs-navbar.abs-wide-lg{
     justify-content: space-evenly;
@@ -187,6 +182,43 @@ BUTTON DESIGNS AND UTILITIES
     margin: 0px 2px;
     font-size: 16.5px;
 }
+.abs-navbar[class*="abs-navbar-expand-"] .abs-nav-menu{
+    display: none;
+}
+.abs-navbar .abs-nav-toggle {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.abs-navbar .abs-nav-toggle .abs-nav-toggler{
+    padding: 7px;
+}
+.nav-close{
+    display: block;
+    cursor: pointer;
+    padding: 0px 10px;
+    text-align: right;
+}
+.abs-navbar .abs-nav-menu.abs-mobile .abs-menu-item{
+    display: block;
+}
+.abs-navbar[class*="abs-navbar-expand-"] .abs-nav-menu.abs-mobile{
+    animation: nav-slideout .1s linear;
+}
+@keyframes nav-slideout{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+/* .abs-navbar .abs-nav-menu.abs-mobile::before{
+    display:block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    height: 100%;
+    background-color: blue;
+} */
 
 /** INPUT FORM DESIGN **/
 input.abs-form-input,select.abs-form-input,textarea.abs-form-input{
@@ -202,7 +234,7 @@ input.abs-form-input,select.abs-form-input,textarea.abs-form-input{
     margin-left: 40px;
     margin-top: 20px; */
 }
-.abs-form-input:focus{
+input.abs-form-input:focus{
     background-color: white;
 }
 .abs-input-group{
@@ -225,6 +257,41 @@ select.abs-form-input option{
     padding: 10px 8px;
 }
 
+.abs-input-styled{
+    position: relative;
+}
+.abs-input-styled .label{
+    display: none;
+}
+.abs-input-styled .abs-label{
+    position: absolute;
+    top: -10px;
+    left: .8em;
+    display: block;
+    padding: 0px 5px;
+    color: blue;
+    background: #fff;
+    font-size: 14px;
+    z-index: 30;
+    animation: inp-up linear .1s;
+}
+
+.abs-chunk-input-group{
+    margin: 20px 0px;
+    display: flex;
+}
+.abs-chunk-input-group .abs-chunk-item{
+    margin: 0 5px;
+    font-size: 20px;
+    padding: 15px;
+    width: 15px;
+    height: 15px;
+}
+@keyframes inp-up{
+    from {top: 10px;font-size: 16px;}
+    to {top: -10px;font-size: 14px;}
+}
+
 .abs-badge{
     padding: 5px 10px;
     display: inline-block;
@@ -240,10 +307,10 @@ select.abs-form-input option{
 }
 
 /** LISTS DESGINS */
-ul.abs-list{
+ul.abs-list{ */
 }
 .abs-list .abs-list-item{
-    padding: 4px 7px;
+    padding: 7px;
 }
 .abs-list.abs-border{
     border: 1px solid #e1e1e1;
@@ -297,7 +364,7 @@ ul.abs-list{
 }
 .abs-side-navbar{
     overflow: hidden;
-    background-color: rgb(62, 4, 189);
+    background-color: rgb(9, 154, 173);
     position: fixed;
     height: 100%;
     /* animation-delay: -.1s; */
@@ -320,17 +387,16 @@ ul.abs-list{
     padding: 7px 4px;
 }
 .abs-side-navbar .abs-sidenav-menu .abs-menu-item {
-    color: #fff;
     display: flex;
     align-items: center;
     padding: 15px 17px;
     /* margin: 2px 0px; */
 }
 .abs-side-navbar .abs-sidenav-menu .abs-menu-item:hover{
-    background-color: rgb(56, 3, 171);
+    background-color: rgba(14, 198, 223, 0.4);
 }
 .abs-side-navbar .abs-sidenav-menu .abs-menu-item .icon{
-    margin-right: 10px;
+    margin-right: 16px;
 }
 .abs-side-navbar .divider{
     display: block;
@@ -386,3 +452,42 @@ table.abs-table.bordered tr {
     border: 1px solid #e1e1e1;
 }
 
+/*TAB DESIGN*/
+.abs-tab.tab-vertical{
+    display: flex;
+}
+.abs-tab .abs-tab-navs{
+    display: flex;
+}
+.abs-tab.tab-vertical .abs-tab-navs{
+    flex-direction: column;
+}
+
+.abs-tab .abs-tab-navs .abs-nav-item{
+    padding: 5px 15px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.abs-tab.tab-vertical .abs-tab-navs .abs-nav-item{
+    padding: 5px 15px;
+    border-bottom: none;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+.abs-tab.tab-vertical .abs-tab-navs .abs-nav-item.active{
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.abs-tab .abs-tab-navs .abs-nav-item.active{
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+
+.abs-tab .abs-tab-group{
+    margin-top: 10px;
+    padding: 15px;
+}
+.abs-tab .abs-tab-group .abs-tab-item:not(.active){
+    display: none;
+}
