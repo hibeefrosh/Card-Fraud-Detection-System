@@ -1,16 +1,23 @@
+:root{
+    --primary: #ff2989;
+    --primary-light: #ff4e9d;
+}
+.dash-card{
+    box-shadow: -2px 2px 9px var(--primary);
+}
 .row,.container-fluid{
     padding: 0;
     margin: 0;
 }
 .bg-color{
-    background-color: rgb(62, 4, 189);
+    background-color: var(--primary);
     color: white;
 }
 .bg-color-light {
-    background-color: rgba(62, 4, 189, 0.4);
+    background-color: var(--primary-light);
 }
 .text-color{
-    color: rgb(62, 4, 189);
+    color: ;
 }
 .abs-navbar.top-bar{
     padding: 10px 7px;

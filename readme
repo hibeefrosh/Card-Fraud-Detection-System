@@ -1,0 +1,65 @@
+
+
+# Card Fraud Detection System
+
+## Overview
+
+The Card Fraud Detection System is a web application designed to manage customer information, issue cards, and provide a mechanism to detect fraudulent activities related to credit cards.
+
+## Features
+
+- **User Management**: Administrators can manage customer details.
+- **Card Issuance**: System allows for the issuance of cards with initial deposit details.
+- **Card Details Retrieval**: Retrieve card details based on first 6 and last 4 digits.
+- **Error Handling**: User-friendly error messages for better user experience.
+
+## Tech Stack
+
+- **PHP**: Backend scripting language.
+- **MySQL**: Database management system.
+- **HTML, CSS, Bootstrap**: Frontend and styling.
+- **Apache**: Web server.
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+- PHP
+- MySQL
+- Apache
+
+## Installation
+
+
+1. Set up the database:
+
+    - Create a new MySQL database.
+    - Import the SQL file located at `/database/card-fraud-detection.sql`.
+
+2. Configure database connection:
+
+    - Open `/config/database.php`.
+    - Update database connection details.
+
+3. Start the Apache server:
+
+    - Make sure Apache is running.
+
+4. Access the application:
+
+    - Open your web browser and go to http://localhost/card-fraud-detection.
+
+## Usage
+
+- Admin Login Credentials:
+    - **Email**: admin@example.com
+    - **Password**: admin_password
+
+- Explore the various features of the application, such as managing customers, issuing cards, and retrieving card details.
+
+
+
+
+
+
+
